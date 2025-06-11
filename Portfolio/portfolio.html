@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nadira Portfolio</title>
+  <style>
+    /* Reset some default styles */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Navbar */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #222;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      z-index: 10;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .navbar a:hover {
+      color: #00ffff;
+    }
+
+    /* Centered image with filter */
+    .image-section {
+      text-align: center;
+      margin-top: 80px;
+      padding: 20px;
+    }
+
+    .filtered-image {
+      filter: grayscale(50%);
+      border-radius: 15px;
+      max-width: 90%;
+      height: auto;
+    }
+
+    /* Table Styling */
+    .table-section {
+      padding: 20px;
+    }
+
+    .table-section table {
+      width: 80%;
+      margin: 0 auto;
+      border-collapse: collapse;
+    }
+
+    .table-section th,
+    .table-section td {
+      border: 1px solid #000;
+      padding: 12px;
+      text-align: left;
+    }
+
+    .table-section th {
+      background-color: #ccc;
+    }
+
+    /* Text Over Image */
+    .text-over-image {
+      position: relative;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .text-over-image img {
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+    }
+
+    .overlay-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 10px 20px;
+      font-size: 1.2rem;
+    }
+
+    /* Two Column Layout */
+    .columns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .column {
+      background-color: #f2f2f2;
+      flex: 1;
+      min-width: 280px;
+      height: 200px;
+      color: #333;
+      padding: 20px;
+    }
+
+    /* Paragraph Hover */
+    .hover-para {
+      text-align: center;
+      margin: 40px;
+      transition: color 0.3s;
+    }
+
+    .hover-para:hover {
+      color: crimson;
+    }
+
+    /* Image Overlay Fade */
+    .fade-image {
+      padding: 20px;
+    }
+
+    .image-container {
+      position: relative;
+      width: 400px;
+      margin: 0 auto;
+      color: white;
+    }
+
+    .image-container img {
+      width: 100%;
+      display: block;
+      border-radius: 10px;
+    }
+
+    .fade-overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+    }
+
+    .image-container:hover .fade-overlay {
+      opacity: 1;
+    }
+
+    /* Video Section */
+    .video-section {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .video-overlay-section {
+      position: relative;
+      width: 600px;
+      max-width: 100%;
+      margin: 40px auto;
+    }
+
+    .video-wrapper video {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .video-text {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 12px 24px;
+      font-size: 1.5rem;
+      border-radius: 5px;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      font-weight: bold;
+      padding: 20px;
+      background-color: #222;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Portfolio</a>
+  </nav>
+
+  <!-- Centered Image -->
+  <section class="image-section">
+    <img src="https://cdn.pixabay.com/photo/2023/10/30/01/31/duck-8351436_1280.jpg" alt="Profile Picture" class="filtered-image" />
+  </section>
+
+  <!-- Table -->
+  <section class="table-section">
+    <h2>Skills Table</h2>
+    <table>
+      <tr>
+        <th>Skill</th>
+        <th>Level</th>
+      </tr>
+      <tr>
+        <td>HTML</td>
+        <td>Advanced</td>
+      </tr>
+      <tr>
+        <td>CSS</td>
+        <td>Intermediate</td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- Text Over Image -->
+  <section class="text-over-image">
+    <img src="https://cdn.pixabay.com/photo/2023/10/30/01/31/duck-8351436_1280.jpg" alt="Banner" />
+    <div class="overlay-text">Welcome to My Portfolio</div>
+  </section>
+
+  <!-- Two Column Layout -->
+  <section class="columns">
+    <div class="column">Column 1 Content</div>
+    <div class="column">Column 2 Content</div>
+  </section>
+
+  <!-- Hover Paragraph -->
+  <section>
+    <p class="hover-para">Hover over this text to see the effect.</p>
+  </section>
+
+  <!-- Image Overlay Fade -->
+  <section class="fade-image">
+    <div class="image-container">
+      <img src="https://cdn.pixabay.com/photo/2023/10/30/01/31/duck-8351436_1280.jpg" alt="Fade Image" />
+      <div class="fade-overlay">Overlay Text</div>
+    </div>
+  </section>
+
+  <!-- Autoplay Video -->
+  <section class="video-section">
+    <video autoplay muted loop width="600">
+      <source src="https://cdn.pixabay.com/video/2019/07/08/25087-347958078_tiny.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </section>
+
+  <!-- Video With Text Overlay -->
+  <section class="video-overlay-section">
+    <div class="video-wrapper">
+      <video autoplay muted loop>
+        <source src="https://cdn.pixabay.com/video/2019/07/08/25087-347958078_tiny.mp4" type="video/mp4" />
+      </video>
+      <div class="video-text">Creative Showreel</div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 My Portfolio</p>
+  </footer>
+
+</body>
+</html>
